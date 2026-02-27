@@ -1,0 +1,7 @@
+flask
+selenium
+webdriver-manager
+pandas
+matplotlib
+scikit-learn
+gunicorn
