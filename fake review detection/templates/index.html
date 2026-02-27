@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amazon Fake Review Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🛒 Amazon Fake Review Detection System</h1>
+    <p class="subtitle">AI-Based Review Authenticity Analyzer</p>
+
+    <!-- Login Section -->
+    <div class="card">
+        <h3>Step 1: Login to Amazon</h3>
+        <form action="/login">
+            <button type="submit" class="btn">Login to Amazon</button>
+        </form>
+    </div>
+
+    <!-- Product Link Section -->
+    <div class="card">
+        <h3>Step 2: Analyze Product Reviews</h3>
+        <form action="/analyze" method="POST">
+            <input type="text" name="product_link"
+                   placeholder="Paste Amazon Product Link"
+                   required>
+            <button type="submit" class="btn analyze-btn">Start Analysis</button>
+        </form>
+    </div>
+
+    {% if show_results %}
+
+    <!-- Results Section -->
+    <div class="results">
+        <h2>📊 Analysis Results</h2>
+
+        <div class="result-cards">
+            <div class="result-box total">
+                <h3>Total Reviews</h3>
+                <p>{{ total }}</p>
+            </div>
+
+            <div class="result-box fake">
+                <h3>Fake Reviews</h3>
+                <p>{{ fake }}</p>
+            </div>
+
+            <div class="result-box genuine">
+                <h3>Genuine Reviews</h3>
+                <p>{{ genuine }}</p>
+            </div>
+        </div>
+
+        <h3 class="product-title">Product: {{ product }}</h3>
+
+        <div class="charts">
+            <div>
+                <h3>Bar Chart</h3>
+                <img src="{{ url_for('static', filename='bar_chart.png') }}">
+            </div>
+
+            <div>
+                <h3>Pie Chart</h3>
+                <img src="{{ url_for('static', filename='pie_chart.png') }}">
+            </div>
+        </div>
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>

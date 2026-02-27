@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #ddd;
+}
+
+.card {
+    background: white;
+    color: black;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 60%;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #2a5298;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #1e3c72;
+}
+
+.analyze-btn {
+    background: #28a745;
+}
+
+.analyze-btn:hover {
+    background: #218838;
+}
+
+.results {
+    margin-top: 40px;
+}
+
+.result-cards {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.result-box {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 25%;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+.result-box p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.fake {
+    border-top: 5px solid red;
+}
+
+.genuine {
+    border-top: 5px solid green;
+}
+
+.total {
+    border-top: 5px solid blue;
+}
+
+.charts {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.charts img {
+    width: 400px;
+    border-radius: 10px;
+    background: white;
+    padding: 10px;
+}
